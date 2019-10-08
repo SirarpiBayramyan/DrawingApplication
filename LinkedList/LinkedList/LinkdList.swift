@@ -220,3 +220,51 @@ extension LinkedList: ExpressibleByArrayLiteral {
     }
 }
 //Collection
+extension LinkedList: Collection {
+  
+    public typealias Index = LinkedListIndex<Element>
+    
+    // The position of the first element in a nonempty collection
+    public var startIndex: Index {
+        get {
+            return LinkedListIndex<Element>(node: head, tag: 0)
+        }
+    }
+    
+    // The collection's "past the end" position---that is, the position one
+    // greater than the last valid subscript argument
+    public var endIndex: Index {
+        get {
+            if let h = self.head {
+                return LinkedListIndex<Element>(node: h, tag: count)
+            } else {
+                return LinkedListIndex<Element>(node: nil, tag: startIndex.tag)
+            }
+        }
+    }
+    
+    public subscript(position: Index) -> Element {
+        get {
+            return position.node!.value
+        }
+    }
+    public func index(after idx: Index) -> Index {
+        return LinkedListIndex<Element>(node: idx.node?.next, tag: idx.tag + 1)
+    }
+    
+    
+}
+
+//Collection Index
+//Custom index type that contains a reference to the node at index 'tag'
+public struct LinkedListIndex<Element>: Comparable {
+    fileprivate let node: LinkedList<Element>.LinkedListNode<Element>?
+    fileprivate let tag: Int //
+    
+    public static func == <Element>(lhs: LinkedListIndex<Element>, rhs: LinkedListIndex<Element>) -> Bool {
+         return (lhs.tag == rhs.tag)
+    }
+    public static func < <Element> (lhs: LinkedListIndex<Element>, rhs: LinkedListIndex<Element>) -> Bool {
+         return (lhs.tag < rhs.tag)
+    }
+}
