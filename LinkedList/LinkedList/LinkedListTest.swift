@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+//test function for "Int"
 func testInt(){
     let numbers = [7, 4, 9, 3, 97, 5]
     let integersList = LinkedList<Int>()
@@ -80,6 +82,70 @@ func testInt(){
     //reverse LinkedList
     print(integersList.reversed())
     
-    
+}
 
+
+//test function for "String"
+func testString() {
+    let strings = ["one", "two", "three"]
+    let stringsList = LinkedList<String>()
+    for string in strings {
+        stringsList.append(string)
+    }
+    print(stringsList)
+    let second = stringsList.head?.next
+    if stringsList.head?.next === second {
+        print("is equal")
+    }
+    stringsList.insert("zero", at: 3)
+    print(stringsList)
+    
+    for i in 0 ..< stringsList.count  { //subscript
+        print(stringsList[i])
+    }
+    
+    let prev = stringsList.node(at: 2)
+    let next = stringsList.node(at: 3)
+    let node = stringsList.node(at: 3)
+    if prev.next === node {
+        print("is equal")
+    }
+    if next.previous === node {
+        print("is equal")
+    }
+    
+    let list = LinkedList<String>()
+    list.append("BMW")
+    list.append("Chevrolet")
+    list.append("Mercedes")
+    list.append("Audi")
+    list.append("Mazda")
+    
+    //insert List at last index
+    stringsList.insert(list, at: stringsList.count)
+    print(stringsList)
+    
+    //append list to emptyList
+    let list2 = LinkedList<String>()
+    list2.append(list)
+    print(list2)
+    
+    //appendList
+    list2.append(stringsList)
+    print(list2)
+    
+    //remove all elements
+    list2.removeAll()
+    print(list2)
+    
+    //remove at index
+    print(stringsList.remove(at: 4))
+
+    //removeLast
+    print(stringsList.remove(at: stringsList.count - 1))
+
+    //reverse LinkedList
+    print(stringsList.reversed())
+
+    
 }
