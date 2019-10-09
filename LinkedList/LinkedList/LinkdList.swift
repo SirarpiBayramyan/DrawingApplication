@@ -80,7 +80,7 @@ public  final class  LinkedList<Element> {
                     break
                 }
             }
-            assert(node != nil, "index out of bounds")
+           assert(node != nil, "index out of bounds")
             return node!
         }
     }

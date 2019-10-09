@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A08E77B234D1E6500FC9E49 /* LinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A08E77A234D1E6500FC9E49 /* LinkedListTest.swift */; };
 		5A856030234C91C8009649E5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A85602F234C91C8009649E5 /* main.swift */; };
 		5A856037234C91E8009649E5 /* LinkdList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A856036234C91E8009649E5 /* LinkdList.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A08E77A234D1E6500FC9E49 /* LinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTest.swift; sourceTree = "<group>"; };
 		5A85602C234C91C8009649E5 /* LinkedList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LinkedList; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A85602F234C91C8009649E5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5A856036234C91E8009649E5 /* LinkdList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkdList.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				5A85602F234C91C8009649E5 /* main.swift */,
 				5A856036234C91E8009649E5 /* LinkdList.swift */,
+				5A08E77A234D1E6500FC9E49 /* LinkedListTest.swift */,
 			);
 			path = LinkedList;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			files = (
 				5A856037234C91E8009649E5 /* LinkdList.swift in Sources */,
 				5A856030234C91C8009649E5 /* main.swift in Sources */,
+				5A08E77B234D1E6500FC9E49 /* LinkedListTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
